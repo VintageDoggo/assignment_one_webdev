@@ -1,15 +1,44 @@
 body{
-  background-color:#5CB8E4;
+  background-color:#181818;
+  margin: 0;
+  text-align: center;
+}
+.prof-pic{
+  display:inline-block;
+
+}
+.name{
+  text-align: center;
+  margin-bottom: 0;
+}
+.bio{
+  text-align: center;
+}
+.short-bio{
+  background-color: #F2F2F2;
+}
+.content{
+  color: #181818;
+  font-family: 'Poppins', sans-serif;
+  font-weight:400;
+}
+.ext-link{
+  color: #8758FF;
 }
 hr {
   border-style: dotted none none;
   color: #F2F2F2;
   width: 5%;
   border-top-width: 8px;
+
 }
 h1{
-  color: #F2F2F2;
+  color: #8758FF;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
 }
 h3{
   color: #F2F2F2;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
 }
