@@ -53,6 +53,22 @@ body{
   border-color: #F2F2F2;
   border-radius: 18%;
 }
+.projects-desc{
+  color:#3b3b3b;
+}
+.gallery{
+  text-align: center;
+}
+
+.gallery img{
+  display: inline-block;
+  filter: grayscale(100%);
+}
+
+.gallery img:hover{
+  filter:none;
+  transition: filter 2s;
+}
 hr {
   border-style: dotted none none;
   color: #F2F2F2;
