@@ -16,14 +16,33 @@ body{
 }
 .short-bio{
   background-color: #F2F2F2;
+  text-align: left;
 }
 .content{
   color: #181818;
   font-family: 'Poppins', sans-serif;
   font-weight:400;
+  text-align: justify;
 }
 .ext-link{
   color: #8758FF;
+}
+.serv-icon{
+  max-height: 90%;
+  max-width: 90%;
+}
+.serv-title{
+  display: inline-block;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  color:#181818;
+  text-align: center;
+  margin-left: 0;
+  padding-left: 0;
+
+}
+.icon-cell{
+  width: 10%;
 }
 hr {
   border-style: dotted none none;
