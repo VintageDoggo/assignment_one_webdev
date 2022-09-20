@@ -44,6 +44,15 @@ body{
 .icon-cell{
   width: 10%;
 }
+
+.submit-button{
+  color: #8758FF;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  background-color: #181818;
+  border-color: #F2F2F2;
+  border-radius: 18%;
+}
 hr {
   border-style: dotted none none;
   color: #F2F2F2;
@@ -60,4 +69,10 @@ h3{
   color: #F2F2F2;
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
+}
+label{
+  color: #F2F2F2;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  text-align: justify;
 }
