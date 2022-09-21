@@ -69,6 +69,33 @@ body{
   filter:none;
   transition: filter 2s;
 }
+
+.intro div{
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.intro h1{
+  padding-top: 0;
+  display: inline-block;
+  position: relative;
+  font-size: 5em;
+  padding-left: 5%;
+}
+
+.statement div{
+  padding: 0;
+  margin-top: 0;
+}
+.statement h3{
+  padding: 0 10%;
+}
+
+.logo {
+  max-width: 30%;
+  max-height: 30%;
+  position:relative;
+}
 hr {
   border-style: dotted none none;
   color: #F2F2F2;
