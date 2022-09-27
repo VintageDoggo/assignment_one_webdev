@@ -1,11 +1,21 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
-</html>
+<%- include partials/header.ejs %>
+<%- include partials/main_nav.ejs %>
+    <!--Main navigator-->
+
+    <div class="intro">
+      <img src="images/favicon_v2.png" alt="my-logo" class = "logo">
+      <br>
+      <h1>Hi, I'm Jorge. <br> An engineer.</h1>
+    </div>
+    <div class = "statement">
+      <h3 style = "text-align: justify">
+        I'm a Mechatronic engineer with ample knowledge in providing with software and  hardware solutions.
+        I'm commited as a professional to always implement the right technology for the job, incoporating the best
+        and latest practices.
+        I'm always eager to  learn something new and happy to take on new opportunities and challenges.
+        Make sure to check my site and contact if anything catches your eye.
+      </h3>
+    </div>
+
+<%- include partials/footer.ejs %>    
+
