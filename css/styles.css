@@ -24,6 +24,10 @@ body{
   font-weight:400;
   text-align: justify;
 }
+
+.padded-content{
+  padding: 0 10%;
+}
 .ext-link{
   color: #8758FF;
 }
@@ -39,12 +43,14 @@ body{
   text-align: center;
   margin-left: 0;
   padding-left: 0;
-
 }
 .icon-cell{
   width: 10%;
 }
 
+.serv-table{
+  padding: 0 15%;
+}
 .submit-button{
   color: #8758FF;
   font-family: 'Poppins', sans-serif;
@@ -52,6 +58,14 @@ body{
   background-color: #181818;
   border-color: #F2F2F2;
   border-radius: 18%;
+}
+.project-title{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  color:#181818;
+  text-align: center;
+  margin-left: 0;
+  padding-left: 0;
 }
 .projects-desc{
   color:#3b3b3b;
@@ -80,7 +94,7 @@ body{
   display: inline-block;
   position: relative;
   font-size: 5em;
-  padding-left: 5%;
+  text-align: center;
 }
 
 .statement div{
