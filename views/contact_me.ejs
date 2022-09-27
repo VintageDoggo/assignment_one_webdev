@@ -1,0 +1,30 @@
+<%- include partials/header.ejs %>
+<%- include partials/main_nav.ejs %>
+
+<h1>Contact me</h1>
+    <h3>Are you interested in any of my services or would like to get in contact? Send me a message!</h3>
+
+    <form action="mailto:jorge.corichi@outlook.com" method="post">
+      <table style="margin-left: auto; margin-right: auto">
+        <tr>
+          <td>
+              <label>Your Name:</label>
+          </td>
+          <td>
+            <input type="text" name="yourName" value="">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Email:</label>
+          </td>
+          <td>
+            <input type="email" name="yourEmail" value="">
+          </td>
+        </tr>
+      </table>
+      <label>Message:</label><br>
+      <textarea name="yourMessage" rows="8" cols="80"></textarea><br>
+      <input id = "submit-form" class = "submit-button"type="submit" name="" value="Submit">
+    </form>
+<%- include partials/footer.ejs %>

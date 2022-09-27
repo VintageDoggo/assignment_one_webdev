@@ -99,7 +99,7 @@ body{
 
 .statement div{
   padding: 0;
-  margin-top: 0;
+  margin-top: 10%;
 }
 .statement h3{
   padding: 0 10%;
@@ -115,6 +115,7 @@ hr {
   color: #F2F2F2;
   width: 5%;
   border-top-width: 8px;
+  margin: 2.5% auto;
 
 }
 h1{
