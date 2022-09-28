@@ -1,4 +1,11 @@
 #!/usr/bin/env node
+/*
+  Author: Jorge Corichi Herrejon
+  Student ID: 301275725
+  File Name: server.js
+  Date: 09/28/2022
+*/
+/* File use to launch the app. node server.js*/
 
 /**
  * Module dependencies.

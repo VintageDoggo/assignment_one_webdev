@@ -1,3 +1,12 @@
+/*
+  Author: Jorge Corichi Herrejon
+  Student ID: 301275725
+  File Name: app.js
+  Date: 09/28/2022
+*/
+/*
+  File that instantiates the express wrapper into the app.
+*/
 let createError = require('http-errors');
 let express = require('express');
 let path = require('path');

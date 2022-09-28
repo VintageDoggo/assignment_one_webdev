@@ -1,3 +1,10 @@
+/*
+  Author: Jorge Corichi Herrejon
+  Student ID: 301275725
+  File Name: index.js
+  Date: 09/28/2022
+*/
+/* File to render the different routes of the site*/
 var express = require('express');
 var router = express.Router();
 
