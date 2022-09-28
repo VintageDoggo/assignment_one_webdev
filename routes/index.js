@@ -6,6 +6,11 @@ router.get('/home', function(req, res, next) {
   res.render('index', { title: 'Home' });
 });
 
+/* GET home page - case 2 */
+router.get('/', function(req, res, next) {
+  res.render('index', { title: 'Home' });
+});
+
 /* GET About Me page. */
 router.get('/about', function(req, res, next) {
   res.render('about_me', { title: 'About Me' });
