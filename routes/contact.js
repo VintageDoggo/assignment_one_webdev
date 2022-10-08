@@ -5,9 +5,8 @@
   Date: 10/08/2022
 */
 let express = require('express');
-let router = express.Router;
+let router = express.Router();
 let mongoose = require('mongoose');
-const { listen } = require('../config/app');
 
 //connect to contact model
 let contact = require('../models/contact');
@@ -20,7 +19,9 @@ router.get('/', (req, res, next) =>
         }
         else{
             //renders the contact-list.ejs and passes the object contactList into the ContactList on the ejs
-            res.render('contact-list', {title: "Business Contacts", ContactList: contactList});
+            res.render('business_contacts', {title: "Business Contacts", ContactList: contactList});
         }
     })
 );
+
+module.exports = router
