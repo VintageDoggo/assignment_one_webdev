@@ -17,12 +17,13 @@
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "jquery": "^3.6.1",
+    "mongoose": "^6.6.5",
     "morgan": "~1.9.1",
+    "nodemon": "^2.0.20",
     "popper.js": "^1.16.1"
   },
   "description": "personal portfolio using ExpressJS",
   "main": "app.js",
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/VintageDoggo/assignment_one_webdev.git"

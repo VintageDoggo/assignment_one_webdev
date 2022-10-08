@@ -11,7 +11,7 @@
  * Module dependencies.
  */
 
-var app = require('./app');
+var app = require('./config/app');
 var debug = require('debug')('assignment-one-webdev:server');
 var http = require('http');
 
