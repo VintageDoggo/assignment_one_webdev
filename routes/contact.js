@@ -21,7 +21,7 @@ router.get('/', (req, res, next) =>
             //renders the contact-list.ejs and passes the object contactList into the ContactList on the ejs
             res.render('business_contacts', {title: "Business Contacts", ContactList: contactList});
         }
-    })
+    }).sort('name')
 );
 
 module.exports = router
