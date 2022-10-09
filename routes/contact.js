@@ -12,6 +12,7 @@ let mongoose = require('mongoose');
 let contact = require('../models/contact');
 
 /* GET Route for the Business Contact Page - READ Op*/
+//Wil sort all documents alphateically and return the Query already sorted
 router.get('/', (req, res, next) => 
     contact.find((err,contactList) =>{
         if(err){

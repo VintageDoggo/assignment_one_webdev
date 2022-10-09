@@ -120,6 +120,13 @@ body{
   max-height: 30%;
   position:relative;
 }
+
+.table-contact{
+  background-color: #F2F2F2;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 hr {
   border-style: dotted none none;
   color: #F2F2F2;
