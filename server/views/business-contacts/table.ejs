@@ -1,0 +1,46 @@
+<%- include ../partials/header.ejs %>
+<%- include ../partials/main_nav.ejs %>
+
+<main class = "container">
+	<div class = "row">
+		<div class = "offset-md-1 col-md-10">
+			<h1> <%= title %></h1>
+			<a href= "/contact-list/add" class="btn btn-primary" role = "button">
+				<i class="fas fa-plus-circle">Add a contact</i>
+			</a>
+			<br>
+			<br>
+			<table class="table table-bordered table-striped table-hover table-contact">
+				<!-- Header Row-->
+				<tr class>
+					<th class= "text-center content">Name</th>
+					<th class= "text-center content">Number</th>
+					<th class= "text-center content">E-mail</th>
+					<th class = "text-center content"></th>
+					<th class = "text-center content"></th>
+
+				</tr>
+				
+				<!-- Repeatable Template Row-->
+				<% for(let count = 0; count < ContactList.length; count++){ %>
+					<tr class>
+						<td class = "text-center content"><%= ContactList[count].name %></td>
+						<td class = "text-center content"><%= ContactList[count].number %></td>
+						<td class = "text-center content"><%= ContactList[count].email %></td>
+						<td class = "text-center content">
+							<a href="/contact-list/edit/<%= ContactList[count]._id %>" class="btn btn-primary"></a>
+							<i class="fas fa-pencil-alt"> Edit </i>
+						</td>
+						<td class = "text-center content">
+							<a href="/contact-list/delete/<%= ContactList[count]._id %>" class="btn btn-danger"></a>
+							<i class="fas fa-trash alt"> Delete </i>
+						</td>
+					</tr>
+				<% } %>
+			</table>
+		</div>
+	</div>
+</main>
+
+<%- include ../partials/footer.ejs %>
+
