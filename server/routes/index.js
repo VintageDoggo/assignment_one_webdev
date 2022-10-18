@@ -28,4 +28,10 @@ router.get('/projects', indexController.displayProjectsPage);
 /* GET Services page. */
 router.get('/services', indexController.displayServicesPage);
 
+/* GET Display Login page */
+router.get('/login', indexController.displayLoginPage);
+
+/*POST Process Login page */
+router.post('/login', indexController.processLoginPage);
+
 module.exports = router;
