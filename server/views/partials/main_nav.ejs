@@ -35,6 +35,28 @@ Extracted from Bootstrap 5.2 documentation
         <li class = "nav-item">
           <a class="nav-link" href="/contact-list">Business Contacts</a>
         </li>
+<!--
+        <% if(typeof displayName == 'string' && displayName){%>
+          <li class="navbar-text"><i>Welcome <%= displayName %> </i></li>
+        <% } %>
+-->
+
+        <% if (typeof displayName == 'string' && displayName){ %> 
+          <li class="nav-item">
+              <a class="nav-link ext-link">
+                Welcome, <%= displayName %>!
+              </a>
+          </li>
+          <li>
+            <a class = "nav-link" href="/logout"> Logout </a>
+          </li>
+        <%} else { %>
+          <li class="nav-item">
+            <a href="/login" class="nav-link">
+              Login
+            </a>
+        <% } %>
+        </li>
       </ul>
     </div>
 </nav>

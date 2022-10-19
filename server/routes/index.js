@@ -34,4 +34,7 @@ router.get('/login', indexController.displayLoginPage);
 /*POST Process Login page */
 router.post('/login', indexController.processLoginPage);
 
+/*GET Process Logout page */
+router.get('/logout', indexController.performLogout);
+
 module.exports = router;

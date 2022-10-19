@@ -13,12 +13,12 @@ contact.find((err,contactList) =>{
     }
     else{
         //renders the contact-list.ejs and passes the object contactList into the ContactList on the ejs
-        res.render('business-contacts/table', {title: "Business Contacts", ContactList: contactList});
+        res.render('business-contacts/table', {title: "Business Contacts", ContactList: contactList, displayName: req.user ? req.user.displayName: '' });
     }
 }).sort('name')
 
 module.exports.displayAddPage = (req, res, next) =>{
-    res.render('business-contacts/add', {title: 'Add Contact'})
+    res.render('business-contacts/add', {title: 'Add Contact', displayName: req.user ? req.user.displayName: ''})
 }
 
 module.exports.processAddPage = (req, res, next) =>{
@@ -50,7 +50,7 @@ module.exports.displayEditPage = (req, res, next) =>{
             res.end(err);
         }
         else{
-            res.render('business-contacts/edit', {title: 'Edit Contact', ContactToEdit: contactToEdit})
+            res.render('business-contacts/edit', {title: 'Edit Contact', ContactToEdit: contactToEdit, displayName: req.user ? req.user.displayName: ''})
         }
     })
 }
