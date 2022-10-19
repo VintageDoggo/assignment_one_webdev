@@ -7,5 +7,7 @@
 //For local dev use "mongodb://127.0.0.1:27017/db_name"
 
 module.exports = {
-    "URI": "mongodb://127.0.0.1:27017/portfolio"
+    //"URI": "mongodb://127.0.0.1:27017/portfolio"
+    //For cloud connection 
+    "URI" : "mongodb+srv://jorgecorichi:Isabella09@projects.akd1o46.mongodb.net/portfolio?retryWrites=true&w=majority"
 }
