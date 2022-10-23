@@ -1,7 +1,18 @@
+/*
+  Author: Jorge Corichi Herrejon
+  Student ID: 301275725
+  File Name: server.js
+  Date: 12/08/2022
+*/
+
 let express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');
 let passport = require('passport');
+
+//enabling JWT
+let jwt = require("jsonwebtoken");
+let DB = require('../config/db');
 
 let userModel = require('../models/user');
 let User = userModel.User;
@@ -45,7 +56,7 @@ module.exports.processLoginPage = (req, res, next) => {
             return next(err);
         }
         if(!user){
-            req.flash('loginMessage', 'Authentication error')
+            req.flash('loginMessage', 'Incorrect username or password')
             return res.redirect('/login');
         }
         req.login(user, (err) => {
@@ -53,7 +64,22 @@ module.exports.processLoginPage = (req, res, next) => {
             if(err){
                 return next(err)
             }
-            return res.redirect('/contact-list')
+            //create a payload based on the user information
+            const payload = {
+                id: user._id,
+                displayName: user.displayName
+            };
+            //signing the payload just created
+            const authToken = jwt.sign(payload, DB.secret, {
+                expiresIn: 624800
+            });
+            /* JSON Response for API
+            res.json({success: true, msg:'User logged in succesfully', user: {
+                id: user._id,
+                displayName: user.displayName
+            }, token: authToken});
+            */
+            return res.redirect('/contact-list');
         });
     })(req,res,next)
 }

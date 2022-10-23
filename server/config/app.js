@@ -12,10 +12,16 @@ let express = require('express');
 let path = require('path');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
+let corse = require('cors');
 
 //authentication modules
 let session = require('express-session');
 let passport = require('passport');
+
+let passportJWT = require('passport-jwt');
+let JWTStrategy = passportJWT.Strategy;
+let ExtractJWT = passportJWT.ExtractJwt;
+
 let passportLocal = require('passport-local');
 let localStrategy = passportLocal.Strategy;
 let flash = require('connect-flash');
@@ -77,6 +83,20 @@ passport.use(User.createStrategy());
 //serialize and deserialize the user info
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
+
+let JWTOptions = {};
+JWTOptions.jwtFromRequest = ExtractJWT.fromAuthHeaderAsBearerToken();
+JWTOptions.secretOrKey = DB.secret;
+
+let strategy = new JWTStrategy(JWTOptions, (JWTPayload, done) => {
+  User.findById(JWTPayload.id).then(user => {
+    return done(null,user);
+  }).catch(err => {
+    return done(err,false);
+  });
+});
+
+passport.use(strategy)
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

@@ -1,12 +1,14 @@
 /*
   Author: Jorge Corichi Herrejon
   Student ID: 301275725
-  File Name: server.js
+  File Name: contact.js
   Date: 10/08/2022
 */
 let express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');
+
+let jwt = require('jsonwebtoken')
 
 let passport = require('passport');
 

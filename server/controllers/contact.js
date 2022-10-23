@@ -1,6 +1,15 @@
+/*
+  Author: Jorge Corichi Herrejon
+  Student ID: 301275725
+  File Name: server.js
+  Date: 12/08/2022
+*/
+
 let express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');
+
+let jwt = require('jsonwebtoken');
 
 //create a reference to the db schema
 let contact = require('../models/contact');

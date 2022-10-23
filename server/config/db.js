@@ -9,5 +9,6 @@
 module.exports = {
     //"URI": "mongodb://127.0.0.1:27017/portfolio"
     //For cloud connection 
-    "URI" : "mongodb+srv://jorgecorichi:Isabella09@projects.akd1o46.mongodb.net/portfolio?retryWrites=true&w=majority"
+    "URI" : "mongodb+srv://jorgecorichi:Isabella09@projects.akd1o46.mongodb.net/portfolio?retryWrites=true&w=majority",
+    "secret": "SomeSecret"
 }
